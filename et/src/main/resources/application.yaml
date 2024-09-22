@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: et
+  devtools:
+    restart:
+      enabled: true
+
+  datasource:
+    url: jdbc:mariadb://localhost:3306/wanderlust
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: root
+    password: Thakur@7

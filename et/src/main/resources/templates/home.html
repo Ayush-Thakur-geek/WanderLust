@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{:: #content}, ~{:: title}, ~{:: css}, ~{:: script})}">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" data-th-href="@{'/css/home.css'}" th:fragment="css" />
+
+</head>
+<body>
+<div id="content">
+    <div class="container">
+        <div class="main">
+            <div class="back-img">
+                <img class="main-img" th:src="@{'/images/welcome.jpg'}">
+            </div>
+            <div class="main-text">
+                <h1>Welcome To WanderLust</h1>
+                <p>Get Set Bag-pack.</p>
+            </div>
+            <div class="main-btn">
+                <div class="register-btn">
+                    <a th:href="@{/register}" class="btn">Join Us</a>
+                </div>
+                <div class="login-btn">
+                    <a th:href="@{/login}" class="btn">Login</a>
+                </div>
+            </div> <!-- Close main-btn div -->
+        </div> <!-- Close main div -->
+        <div id="about" class="about">
+            <div class="about-txt">
+                <h1>
+                    About Us
+                </h1>
+                <p>
+                    WanderLust is a travel website that helps you plan your next trip. We provide you with the best
+                    travel destinations, hotels, and restaurants. We also provide you with the best travel guides and
+                    tips to make your trip memorable.
+                </p>
+            </div>
+            <div class="about-services">
+                <h1 style="font-size: 3rem">
+                    Our Services
+                </h1>
+                <div class="services">
+                    <a class="service" th:href="@{/air_service}">
+                        <img th:src="@{'/images/air.jpeg'}" alt="destination">
+                        <h2>Plane Tickets</h2>
+                        <p>Find the best prices and book your air tickets.</p>
+                    </a>
+                    <a class="service" th:href="@{/rail_service}">
+                        <img th:src="@{'/images/rail.jpg'}" alt="destination">
+                        <h2>Rail Tickets</h2>
+                        <p>Book your thrilling rail journey to your favourite destination.</p>
+                    </a>
+                    <a class="service" th:href="@{/hotel_service}">
+                        <img th:src="@{'/images/hotel.jpg'}" alt="destination">
+                        <h2>Hotels</h2>
+                        <p>Find and book the best hotels for your stay.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="contact" class="contact">
+            <h1>
+                Contact Us
+            </h1>
+            <div class="contact-info">
+                <div class="contact-details pNo">
+                    <i class="fa-solid fa-phone fa-2x"></i>
+                    <p>+91 1234567890</p>
+                </div>
+                <div class="contact-details email">
+                    <i class="fa-solid fa-envelope fa-2x"></i>
+                    <p>
+                        ayush26819@gmail.com
+                    </p>
+                </div>
+                <a class="contact-details twitter">
+                    <i class="fa-brands fa-twitter fa-2x"></i>
+                    <p>
+                        @WanderLust
+                    </p>
+                </a>
+                <a class="contact-details insta">
+                    <i class="fa-brands fa-instagram fa-2x"></i>
+                    <p>
+                        @WanderLust
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div> <!-- Close container div -->
+</div> <!-- Close content div -->
+
+<script th:src="@{'/js/script.js'}"></script>
+</body>
+</html>

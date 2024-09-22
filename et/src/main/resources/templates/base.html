@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" th:fragment="parent(content, title, css, script)" xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title data-th-replace="${title}">Travel</title>
+    <link th:replace="${css}"/>
+    <link rel="stylesheet" data-th-href="@{'/css/nav.css'}" th:fragment="css" />
+    <link
+            href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" data-th-href="@{'/css/loco.css'}" />
+</head>
+<body>
+<!--navbar-->
+<nav th:replace="~{navbar :: navbar}"></nav>
+<!--main content-->
+<div>
+    <section data-th-replace="${content}"></section>
+</div>
+
+<th:block data-th-replace="${script}"></th:block>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+        integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+></script>
+<script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<nav
+    th:fragment="navbar"
+>
+    <div class="logo-container">
+        <a th:href="@{/}">
+            <img class="logo" th:src="@{/images/logo.png}">
+        </a>
+    </div>
+    <div class="nav-links">
+        <a th:href="@{/}" class="link">Home</a>
+        <a href="#about" class="link">About</a>
+        <a href="#contact" class="link">Contact</a>
+    </div>
+</nav>
